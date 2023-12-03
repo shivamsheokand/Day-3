@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Form, Route, Routes } from "react-router-dom";
+import Nav from "./Pages/Nav";
+import Hero from "./Pages/Hero";
+import Acceptcha from "./Pages/Acceptcha";
+import Cources from "./Pages/Cources";
+import About from "./Pages/About";
+import User from "./Pages/User";
+import Userform from "./Pages/Userform";
+import Footer from "./Pages/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen flex flex-col bg-[#171717] ">
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+      </Routes>
+      <Acceptcha />
+      <Cources />
+      <About />
+      <User />
+      <Userform />
+      <Footer />
     </div>
   );
 }
